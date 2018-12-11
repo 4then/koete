@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>~</title>
+    
+    <style>
+      .gateway {
+        margin: 80px auto;
+        text-align: center;
+      }
+
+      .gateway li {
+        position: relative;
+        display: inline-block;
+        margin: 0 10px;
+        padding: 2px;
+        font-size: 18px;
+        text-align: center;
+        border: 2px solid #666;
+      }
+
+      .gateway li::before,
+      .gateway li::after {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        transition: 200ms ease-in;
+        transform-origin: center center;
+      }
+
+      .gateway li::before {
+        height: calc(100% + 2px * 2);
+        width: calc(100% + 2px * 2 - 10px);
+        top: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .gateway li::after {
+        height: calc(100% + 2px * 2 - 10px);
+        width: calc(100% + 2px * 2);
+        top: 50%;
+        left: -2px;
+        transform: translateY(-50%);
+      }
+
+      .gateway li:hover::before {
+        width: 0;
+      }
+
+      .gateway li:hover::after {
+        height: 0;
+      }
+
+      .gateway li a {
+        position: relative;
+        display: inline-block;
+        color: #333;
+        text-decoration: none;
+        line-height: 1em;
+        font-size: 1em;
+        padding: 5px 20px;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="gateway">
+      <li><a href="#">log</a></li>
+      <li><a href="#">git</a></li>
+      <li><a href="#">philosophy</a></li>
+    </ul>
+
+    <!-- Oh, so you were looking for easter eggs.. Here you go!
+         https://youtu.be/02n2yYBwHXo -->
+  </body>
+</html>
